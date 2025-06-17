@@ -1,0 +1,123 @@
+# .windsurf/config/memory.yaml
+# Enhanced Memory System Configuration
+
+version: "2.1.0"
+
+# Memory Architecture
+architecture:
+  storage_backend: "file_based"  # file_based, vector_db, hybrid
+  indexing_enabled: true
+  compression_enabled: true
+  encryption_enabled: false  # Set to true for sensitive projects
+
+# Memory Categories
+categories:
+  core:
+    description: "Essential project knowledge"
+    retention_days: 365
+    max_size_mb: 50
+    auto_backup: true
+    
+  sessions:
+    description: "Session-specific context"
+    retention_days: 30
+    max_size_mb: 20
+    auto_cleanup: true
+    
+  patterns:
+    description: "Reusable solutions and patterns"
+    retention_days: 180
+    max_size_mb: 100
+    versioning: true
+    
+  metrics:
+    description: "Performance and usage metrics"
+    retention_days: 90
+    max_size_mb: 10
+    aggregation: daily
+
+# Memory Processing
+processing:
+  indexing:
+    fields: ["title", "tags", "content", "created", "updated"]
+    search_engine: "simple"  # simple, elasticsearch, vector
+    update_interval_seconds: 300
+    
+  compression:
+    algorithm: "gzip"
+    min_file_size_kb: 5
+    compression_level: 6
+    
+  validation:
+    schema_validation: true
+    content_validation: true
+    duplicate_detection: true
+
+# Performance Settings
+performance:
+  cache:
+    enabled: true
+    ttl_seconds: 1800
+    max_size_mb: 100
+    
+  batch_processing:
+    enabled: true
+    batch_size: 50
+    max_parallel: 4
+    
+  memory_limits:
+    max_total_size_mb: 500
+    warning_threshold_mb: 400
+    cleanup_threshold_mb: 450
+
+# Integration Settings
+integrations:
+  git:
+    auto_commit: true
+    commit_message_template: "docs(memory): {action} {category}/{filename}"
+    ignore_patterns: ["*.tmp", "*_cache.json"]
+    
+  mcp:
+    auto_import: true
+    import_directory: "imports"
+    export_directory: "exports"
+    
+  monitoring:
+    enabled: true
+    log_level: "INFO"
+    metrics_collection: true
+
+# Security Settings
+security:
+  sensitive_data_patterns:
+    - "password"
+    - "api_key" 
+    - "secret"
+    - "token"
+  redaction_enabled: true
+  access_control:
+    read_permissions: ["architect", "planner", "executor", "reviewer"]
+    write_permissions: ["executor", "reviewer"]
+    admin_permissions: ["architect"]
+
+# Backup and Recovery
+backup:
+  enabled: true
+  schedule: "0 2 * * *"  # Daily at 2 AM
+  retention_days: 30
+  compression: true
+  location: "backups/"
+  
+# Memory Templates
+templates:
+  error:
+    schema: "error_template.yaml"
+    required_fields: ["timestamp", "error_type", "context", "resolution"]
+    
+  lesson:
+    schema: "lesson_template.yaml" 
+    required_fields: ["title", "category", "description", "impact"]
+    
+  pattern:
+    schema: "pattern_template.yaml"
+    required_fields: ["name", "problem", "solution", "examples"]

@@ -47,6 +47,10 @@ The system operates in a clear, sequential manner:
 
 Contributions to this project are welcome. If you would like to contribute, please follow the guidelines outlined in the `CONTRIBUTING.md` file. This includes standards for coding, testing, and submitting pull requests.
 
+## External Contributions
+
+This project benefited from external analysis provided in the `Claude_Review/` directory. Adopted suggestions are summarized in Section&nbsp;15 of `o3_high_project_review.md`.
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for full details.

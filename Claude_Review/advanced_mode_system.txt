@@ -1,0 +1,231 @@
+# .windsurf/config/modes.yaml
+# Advanced Operational Mode System
+
+version: "2.1.0"
+default_mode: "PLANNER"
+
+# Mode Definitions
+modes:
+  ARCHITECT:
+    description: "High-level system design and strategic planning"
+    allowed_actions:
+      - "read_context"
+      - "update_architecture"
+      - "create_diagrams"
+      - "research_technologies"
+      - "make_technical_decisions"
+    forbidden_actions:
+      - "write_application_code"
+      - "execute_tasks"
+      - "modify_detailed_plans"
+    entry_requirements:
+      - "major_feature_request"
+      - "architectural_change_needed"
+      - "new_project_phase"
+    exit_conditions:
+      - "architectural_plan_approved"
+      - "technical_specifications_complete"
+    validation_rules:
+      - "must_update_architecture_md"
+      - "must_justify_technical_decisions"
+      - "must_consider_scalability"
+    max_session_duration_hours: 4
+    
+  PLANNER:
+    description: "Detailed task planning and decomposition"
+    allowed_actions:
+      - "read_architectural_plans"
+      - "create_task_lists" 
+      - "decompose_requirements"
+      - "estimate_effort"
+      - "define_acceptance_criteria"
+    forbidden_actions:
+      - "write_application_code"
+      - "make_architectural_decisions"
+      - "execute_tasks"
+    entry_requirements:
+      - "approved_architectural_plan"
+      - "user_feature_request"
+      - "bug_report_received"
+    exit_conditions:
+      - "detailed_task_plan_created"
+      - "all_tasks_have_clear_criteria"
+    validation_rules:
+      - "tasks_must_be_atomic"
+      - "must_define_dependencies"
+      - "must_include_testing_strategy"
+    max_session_duration_hours: 2
+    
+  EXECUTOR:
+    description: "Task implementation and code generation"
+    allowed_actions:
+      - "write_code"
+      - "run_tests"
+      - "create_files"
+      - "modify_files"
+      - "execute_commands"
+    forbidden_actions:
+      - "modify_task_plans"
+      - "make_architectural_decisions"
+      - "skip_validation_steps"
+    entry_requirements:
+      - "approved_task_plan"
+      - "clear_acceptance_criteria"
+      - "all_dependencies_met"
+    exit_conditions:
+      - "all_acceptance_criteria_met"
+      - "tests_passing"
+      - "code_review_ready"
+    validation_rules:
+      - "must_follow_coding_standards"
+      - "must_write_tests"
+      - "must_document_changes"
+    max_session_duration_hours: 6
+    
+  REVIEWER:
+    description: "Quality assurance and validation"
+    allowed_actions:
+      - "review_code"
+      - "validate_requirements"
+      - "run_quality_checks"
+      - "update_documentation"
+      - "approve_or_reject_work"
+    forbidden_actions:
+      - "write_application_code"
+      - "modify_requirements"
+      - "skip_review_steps"
+    entry_requirements:
+      - "completed_task_ready"
+      - "all_tests_passing"
+    exit_conditions:
+      - "work_approved"
+      - "feedback_provided"
+    validation_rules:
+      - "must_check_all_criteria"
+      - "must_validate_tests"
+      - "must_verify_documentation"
+    max_session_duration_hours: 2
+    
+  DEBUG:
+    description: "Systematic problem diagnosis and resolution"
+    allowed_actions:
+      - "analyze_errors"
+      - "reproduce_issues"
+      - "write_debugging_code"
+      - "create_test_cases"
+      - "document_solutions"
+    forbidden_actions:
+      - "make_architectural_changes"
+      - "modify_unrelated_code"
+    entry_requirements:
+      - "reproducible_bug_report"
+      - "error_logs_available"
+    exit_conditions:
+      - "root_cause_identified"
+      - "fix_implemented_and_tested"
+    validation_rules:
+      - "must_reproduce_issue"
+      - "must_create_regression_test"
+      - "must_document_solution"
+    max_session_duration_hours: 4
+
+# Advanced Mode Configurations
+advanced_modes:
+  RESEARCH:
+    description: "Information gathering and analysis only"
+    extends: "ARCHITECT"
+    restrictions:
+      - "no_code_generation"
+      - "no_architectural_decisions"
+      - "output_must_be_research_only"
+    allowed_actions:
+      - "web_search"
+      - "analyze_documentation"
+      - "gather_requirements"
+      - "create_research_reports"
+      
+  INNOVATE:
+    description: "Creative brainstorming and ideation"
+    extends: "ARCHITECT"
+    restrictions:
+      - "no_final_decisions"
+      - "output_must_be_ideas_only"
+    allowed_actions:
+      - "generate_alternatives"
+      - "brainstorm_solutions"
+      - "create_proof_of_concepts"
+
+# Mode Transitions
+transitions:
+  ARCHITECT:
+    valid_next_modes: ["PLANNER", "RESEARCH", "INNOVATE"]
+    auto_transition_conditions:
+      to_PLANNER: "architectural_plan_approved"
+    transition_validations:
+      - "architecture_documented"
+      - "technical_decisions_justified"
+      
+  PLANNER:
+    valid_next_modes: ["EXECUTOR", "ARCHITECT"]
+    auto_transition_conditions:
+      to_EXECUTOR: "task_plan_approved"
+      to_ARCHITECT: "architectural_change_needed"
+    transition_validations:
+      - "tasks_properly_defined"
+      - "dependencies_mapped"
+      
+  EXECUTOR:
+    valid_next_modes: ["REVIEWER", "DEBUG", "PLANNER"]
+    auto_transition_conditions:
+      to_REVIEWER: "implementation_complete"
+      to_DEBUG: "tests_failing"
+    transition_validations:
+      - "acceptance_criteria_checked"
+      - "tests_written"
+      
+  REVIEWER:
+    valid_next_modes: ["EXECUTOR", "PLANNER", "ARCHITECT"]
+    auto_transition_conditions:
+      to_EXECUTOR: "revisions_needed"
+    transition_validations:
+      - "review_complete"
+      - "feedback_provided"
+      
+  DEBUG:
+    valid_next_modes: ["EXECUTOR", "REVIEWER"]
+    auto_transition_conditions:
+      to_EXECUTOR: "fix_ready_for_implementation"
+      to_REVIEWER: "fix_implemented"
+    transition_validations:
+      - "root_cause_documented"
+      - "regression_test_created"
+
+# Performance and Monitoring
+monitoring:
+  track_mode_duration: true
+  track_transition_patterns: true
+  alert_on_long_sessions: true
+  log_mode_effectiveness: true
+  
+performance:
+  mode_switching_overhead_ms: 500
+  context_preservation_enabled: true
+  mode_specific_caching: true
+  
+# Security and Validation
+security:
+  mode_permission_validation: true
+  action_authorization_required: true
+  forbidden_action_blocking: true
+  
+validation:
+  entry_requirement_checking: true
+  exit_condition_validation: true
+  transition_validation: true
+  
+# Error Handling
+error_handling:
+  invalid_mode_transition: "log_and_stay"
+  forbidden_action_attempt: "block_and_warn"
+  validation_failure: "request_clarification"
+  timeout_exceeded: "auto_transition_to_default"
