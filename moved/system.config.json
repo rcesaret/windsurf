@@ -1,0 +1,21 @@
+{
+  "$schema": "./schemas/system.config.schema.json",
+  "version": "1.0.0",
+  "agent_name": "Cascade",
+  "default_llm": "claude-3-opus-20240229",
+  "logging": {
+    "level": "INFO",
+    "file": "./logs/windsurf.log"
+  },
+  "rules": {
+    "scan_on_startup": true,
+    "default_activation": "AlwaysOn"
+  },
+  "memory": {
+    "provider": "local",
+    "path": "./memories"
+  },
+  "telemetry": {
+    "enabled": true
+  }
+}

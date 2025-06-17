@@ -1,0 +1,46 @@
+Requested edits and additions to `Proposal- An Advanced Instructional Memory Architecture for the Windsurf AI Agent.md` by the Windsurf Cascade AI Agent:
+
+- correct any inaccuracies in the proposal with respect to the kinds of `.windsurf/` directory customizations that are possible
+- refine and expand the content of the proposal with additional technical details on 
+  - how best to implement each component of this plan
+  - the purpose of specific files
+  - any constraints or limitations to be aware of in implementing the proposal
+  - the necessary contents of specific files
+  - the necessary formatting of specific files
+  - the necessary file interactions
+  - additional and/or alternative implementation possibilities
+- Add any specific reccomendations you have directly to this proposal
+- Edit the text so that the original modes and the RIPER-5 modes are both just suggestions for modes to implement in the rule system
+- Add more detailed examples and tutorials
+- Add content to address potential performance impacts of complex rule hierarchies.
+- Add content on the file-based memory system to include guidelines for managing large volumes of memories.
+- Add more explicit guidance on how the system handles rule conflicts or errors.
+- Use my current project implementation of Plan Mode plans (`.windsurf/plans/`) as the template for the proposed `.windsurf/planning/plans/`
+- propose that no global Windsurf rules will be used whatsoever in the proposed framework. All formal windsurf rules (excluding those in .windsurf/instructions/) will be in the `.windsurf/rules/` subdirectory
+- propose to use the medium-spec version of the original repo's rules  (@original_repo_rules ) as a base template for further edits -- used instead of high-spec due to length limits
+- explain the division of rule files (@original_repo_rules ) between the base/universal rules (rules 01 through 06) and the additional/mode-specific/customized rules (07 through 10) in original repo's rules
+- review and explain each of the templated (original repo medium-spec) rules files (@original_repo_rules )
+- Propose that `.windsurf/memories/error_documentation.md` in the proposed framework is offloaded from the original repo's `.windsurf/rules/03-error-documentation.md `. Include technical details and implementation details.
+- Propose that `.windsurf/memories/lessons_learned.md` in the proposed frmework is offloaded from the original repo's `.windsurf/rules/04-lessons-learned.md `. Include technical details and implementation details
+- Propose that `.windsurf/context/directory_structure.md` in the proposed framework is offloaded from the original repo's `.windsurf/rules/06-directory-structure.md `. Include technical details and implementation details
+- Reccomend a detailed implementation strategy to offload the original repo's `.windsurf/rules/02-memory.md` @02-memory.md -memory to non-formal-rules files within the proposed `.windsurf/` subdirectory
+- Propose comprehensive edits to the base rule sets (@original_repo_rules ) for the proposed system for optimization for Windsurf, with special attention to rule file character length constraints
+- Propose that the tasks system will use the same formatting and structure as @TASKS.md in the Digital TMP project (provide detailed explanation and examples rather than reference to the Digital TMP project)
+- Propose that the new/proposed system will include the following. Please explain the needs each of the following, providing reccomendations, design new templates and examples, implementation guide, etc. -- some of which are adapted from the rules from the original repo (@original_repo_rules ) for:
+  - hard and soft rules for MCP and tool usage
+  - a glossary.md file
+  - an `examples.md` file
+  - Core Persona for Cascade agent 
+  - Several custom modes
+  - hard and soft rules for project documentation, docs updates & docs standards
+  - hard and soft rules for tasking, including formatting, definition of done
+  - hard and soft rules for planning
+  - hard and soft rules for version control
+  - hard and soft rules for testing
+  - hard and soft rules for debugging
+  - hard and soft rules for coding -- including standards for each language used in the project, with grobs for their types of files
+  - hard and soft rules for QA
+  - hard and soft rules for data
+  - hard and soft rules for metadata
+  - hard and soft rules for project-conventions
+  
