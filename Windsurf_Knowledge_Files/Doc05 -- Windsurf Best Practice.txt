@@ -1,0 +1,1154 @@
+---
+file: `Doc05 -- Windsurf Best Practice.md`
+title: "Windsurf Best Practices Repository Archive"
+document_id: "c3d4e5f6-a7b8-9012-3456-7890abcdef02" # Generated UUID
+version: "1.0" # Inferred from nature of content
+date_created: "VALUE_NOT_FOUND_IN_DOCUMENT" # Source repository creation date not specified
+date_modified: "2025-05-30"
+language: "en"
+abstract: |
+  A flattened representation of the 'windsurf_best_practice' GitHub repository by 'kamusis'. This document consolidates all text-based files from the repository, including READMEs, configuration guides, detailed 'memories' (global and specific guidelines for Windsurf's AI on communication, code generation, commit messages, tool usage, and architecture), practical examples like an SQL converter project, 'hacks' for the Cascade AI assistant, and defined workflows such as the RIPER-5 operational protocol.
+keywords:
+  - "Windsurf"
+  - "Best Practices"
+  - "Cascade AI"
+  - "Rule System"
+  - "Memories"
+  - "Configuration"
+  - "Workflow"
+  - "RIPER-5"
+  - "SQL Converter"
+  - "AI IDE"
+  - "Codeium"
+  - "Git"
+  - "Prompt Engineering"
+document_type: "Knowledge Base Aggregation" # [cite: 68]
+purpose_statement: |
+  To serve as a centralized, flattened archive of the 'windsurf_best_practice' GitHub repository, providing comprehensive guidelines, configurations, workflows, and examples for effectively using the Windsurf AI IDE and its Cascade assistant.
+intended_audience:
+  - "Windsurf Users"
+  - "Software Developers"
+  - "AI Practitioners"
+  - "Prompt Engineers"
+scope: |
+  Consolidates content from the 'kamusis/windsurf_best_practice' repository. Covers Windsurf configuration (extension marketplace), 'memories' system (global rules, guidelines for communication, code, commit messages, tool usage, architecture mode), example projects (SQL converter), Cascade AI instructions and tool guidelines, and development workflows (general planning, bug fixing, RIPER-5 protocol).
+document_status: "Archived Snapshot" # Inferred from "flattened representation"
+categories: # [cite: 5, 114]
+  - "Software Development/Developer Tools"
+  - "Artificial Intelligence/AI-Assisted Development"
+  - "Technical Documentation/Best Practices"
+  - "Community Resources/GitHub Repositories"
+tags: # [cite: 6, 133, 136]
+  - "Windsurf"
+  - "Cascade AI"
+  - "AI IDE"
+  - "Rule System"
+  - "Memories"
+  - "Global Rules"
+  - "Workflow"
+  - "RIPER-5"
+  - "Best Practices"
+  - "Configuration"
+  - "Prompt Engineering"
+  - "Code Generation"
+  - "Commit Messages"
+  - "Tool Usage"
+  - "GitHub"
+  - "kamusis"
+llm_processing_instructions: # [cite: 12, 296]
+  llm_focus_areas: # [cite: 302]
+    - "File: memories/global_rules.md"
+    - "File: memories/guidelines/*"
+    - "File: hacks/cascade_instruction.md"
+    - "File: workflows/RIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md"
+  summary_points_to_emphasize: # [cite: 306]
+    - "The structure and content of Windsurf 'memories' and guidelines."
+    - "Best practices for AI communication, code generation, and commit messages."
+    - "The RIPER-5 strict operational protocol for AI interaction."
+    - "Instructions and guidelines for using the Cascade AI assistant and its tools."
+  example_user_questions_answered: # [cite: 312]
+    - "What are the global rules for Windsurf's AI?"
+    - "How should commit messages be formatted according to Windsurf best practices?"
+    - "What is the RIPER-5 protocol?"
+    - "What are the capabilities of the Cascade AI assistant?"
+---
+
+
+# Project Repository Archive: windsurf_best_practice
+
+## Document Overview and Purpose
+
+This document is a flattened representation of the [windsurf\_best\_practice repository](https://github.com/kamusis/windsurf_best_practice), originally cloned to `C:\Users\rcesa\Downloads\windsurf_best_practice\`. It consolidates all text-based files from the repository into a single Markdown file for easy viewing, sharing, and searching. Each file's content is preceded by its original path and a brief purpose.
+
+## Table of Contents
+
+* [Project Repository Archive: windsurf\_best\_practice](#project-repository-archive-windsurf_best_practice)
+* [Document Overview and Purpose](#document-overview-and-purpose)
+* [File: README.md](#file-readme-md)
+    * [Windsurf Best Practices](#windsurf-best-practices)
+    * [Overview](#overview)
+    * [Key Features](#key-features)
+    * [Repository Structure](#repository-structure)
+    * [Getting Started](#getting-started)
+    * [Core Concepts Deep Dive](#core-concepts-deep-dive)
+    * [How to Use This Repository](#how-to-use-this-repository)
+    * [Examples in Action](#examples-in-action)
+    * [Contributing](#contributing)
+* [File: configuration.md](#file-configuration-md)
+    * [Windsurf Configuration Best Practices](#windsurf-configuration-best-practices)
+    * [Change the default extension marketplace](#change-the-default-extension-marketplace)
+* [File: memories/README.md](#file-memories-readme-md)
+    * [WindSurf Memories](#windsurf-memories)
+    * [Repository Structure](#repository-structure-1)
+    * [Purpose](#purpose)
+    * [Core Guidelines](#core-guidelines)
+    * [Updates and Maintenance](#updates-and-maintenance)
+    * [Contributing](#contributing-1)
+    * [Security](#security)
+    * [Version Control](#version-control)
+* [File: memories/global\_rules.md](#file-memories-global_rules-md)
+    * [WindSurf Global Rules and Guidelines](#windsurf-global-rules-and-guidelines)
+    * [Core Guidelines](#core-guidelines-1)
+* [File: memories/guidelines/01\_communication\_guidelines.md](#file-memories-guidelines-01_communication_guidelines-md)
+    * [Communication Guidelines](#communication-guidelines)
+    * [1. Language Response Rules](#1-language-response-rules)
+    * [2. Documentation and Communication Style](#2-documentation-and-communication-style)
+    * [3. Error and Status Communication](#3-error-and-status-communication)
+    * [4. Maintenance Communication](#4-maintenance-communication)
+    * [5. Language Translation Rules](#5-language-translation-rules)
+* [File: memories/guidelines/02\_code\_guidelines.md](#file-memories-guidelines-02_code_guidelines-md)
+    * [Code Generation Guidelines](#code-generation-guidelines)
+    * [1. Language and Naming](#1-language-and-naming)
+    * [2. Code Documentation and Comments](#2-code-documentation-and-comments)
+    * [3. Code Quality Best Practices](#3-code-quality-best-practices)
+    * [4. Security Considerations](#4-security-considerations)
+    * [5. Performance Considerations](#5-performance-considerations)
+    * [6. Code Maintenance](#6-code-maintenance)
+* [File: memories/guidelines/03\_commit\_message\_guidelines.md](#file-memories-guidelines-03_commit_message_guidelines-md)
+    * [Commit Message Guidelines](#commit-message-guidelines)
+    * [Commit Prefixes](#commit-prefixes)
+* [File: memories/guidelines/04\_tool\_usage\_guidelines.md](#file-memories-guidelines-04_tool_usage_guidelines-md)
+    * [Tool Usage Guidelines](#tool-usage-guidelines)
+    * [1. Strategic Tool Selection](#1-strategic-tool-selection)
+    * [2. Efficient Information Gathering](#2-efficient-information-gathering)
+    * [3. Focused Code Changes](#3-focused-code-changes)
+    * [4. Tool Categories](#4-tool-categories)
+* [File: memories/guidelines/05\_architecture\_mode\_guildelines.md](#file-memories-guidelines-05_architecture_mode_guildelines-md)
+    * [Architecture](#architecture)
+* [File: examples/sql\_converter\_project.md](#file-examples-sql_converter_project-md)
+    * [SQL Converter Project Documentation](#sql-converter-project-documentation)
+    * [Project Objectives](#project-objectives)
+    * [Clarifying Questions and Answers](#clarifying-questions-and-answers)
+    * [Designed Repository Structure](#designed-repository-structure)
+    * [Core Components Overview](#core-components-overview)
+* [File: hacks/cascade\_instruction.md](#file-hacks-cascade_instruction-md)
+    * [Cascade Agentic AI Coding Assistant - Complete Instructions](#cascade-agentic-ai-coding-assistant---complete-instructions)
+    * [File Operations](#file-operations)
+    * [Codebase Interaction](#codebase-interaction)
+    * [Command Execution](#command-execution)
+    * [Memory System](#memory-system)
+    * [Web Operations](#web-operations)
+    * [Deployment](#deployment)
+    * [Database Operations](#database-operations)
+    * [AI Features](#ai-features)
+    * [Important Rules](#important-rules)
+    * [Workflow Guidelines](#workflow-guidelines)
+* [File: hacks/Cascade\_Tools\_Guidelines.md](#file-hacks-cascade_tools_guidelines-md)
+    * [Cascade Tools Usage Guidelines](#cascade-tools-usage-guidelines)
+    * [**General Rules**](#general-rules)
+    * [**Common Tools and Use Cases**](#common-tools-and-use-cases)
+    * [**Best Practices**](#best-practices)
+    * [**Explicit Tool Requests Guideline**](#explicit-tool-requests-guideline)
+* [File: workflows/workflow.md](#file-workflows-workflow-md)
+    * [Workflow](#workflow)
+    * [Plan at first](#plan-at-first)
+    * [Fix bugs](#fix-bugs)
+    * [Write plan](#write-plan)
+    * [Implement plan](#implement-plan)
+    * [Add Comments](#add-comments)
+* [File: workflows/RIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md](#file-workflows-riper-5-mode-strict-operational-protoco-md)
+    * [RIPER-5 MODE: STRICT OPERATIONAL PROTOCOL](#riper-5-mode-strict-operational-protocol)
+    * [CONTEXT PRIMER](#context-primer)
+    * [META-INSTRUCTION: MODE DECLARATION REQUIREMENT](#meta-instruction-mode-declaration-requirement)
+    * [THE RIPER-5 MODES](#the-riper-5-modes)
+    * [CRITICAL PROTOCOL GUIDELINES](#critical-protocol-guidelines)
+    * [MODE TRANSITION SIGNALS](#mode-transition-signals)
+
+---
+
+## File: README.md
+
+*Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\README.md`*
+
+**Purpose:** This is the main README file for the repository. It provides a comprehensive overview of the Windsurf Best Practices project, its goals, structure, key features, and instructions for getting started and contributing.
+
+### Windsurf Best Practices
+
+Welcome to [the Windsurf Best Practices repository](https://github.com/kamusis/windsurf_best_practice)! This project serves as a centralized hub for guidelines, configurations, workflows, and examples designed to help you work effectively and efficiently with Windsurf, the world's first agentic Integrated Development Environment (IDE), and other Artificial Intelligence (AI)-driven development tools. Our goal is to empower users to maximize productivity, maintain high code quality, and ensure consistent, predictable interactions with AI coding assistants.
+
+#### Overview
+
+Windsurf represents a paradigm shift in software development, leveraging AI to assist with coding tasks. To harness its full potential, it's crucial to establish clear guidelines and workflows. This repository provides a structured approach to:
+
+* **Guiding AI Behavior**: Through a dedicated `memories/` system, defining how Windsurf should communicate, generate code, manage commits, and utilize its tools.
+* **Configuring Your Environment**: Step-by-step instructions for optimizing your Windsurf setup.
+* **Defining Interaction Workflows**: Standardized processes for common development tasks like planning, bug fixing, and implementation, including advanced protocols like RIPER-5 (Research, Innovate, Plan, Execute, Review).
+* **Effective Prompt Engineering**: Examples and templates for instructing AI assistants clearly.
+* **Understanding Tool Capabilities**: Insights into specific toolsets like the Cascade Agentic AI Coding Assistant.
+* **Learning by Example**: Demonstrations of these principles applied in a sample project.
+
+This repository is intended for developers using Windsurf or similar AI coding assistants who wish to adopt a structured and effective methodology for AI-assisted development.
+
+#### Key Features
+
+[This repository](https://github.com/kamusis/windsurf_best_practice) is built around several key pillars:
+
+* 🧠 **Memories & Guidelines**: A comprehensive set of rules and best practices stored in the [`memories/`](C:\Users\rcesa\Downloads\windsurf_best_practice\memories) directory, designed to be the "source of truth" for Windsurf's operational conduct.
+* ⚙️ **Configuration**: Detailed steps in [`configuration.md`](C:\Users\rcesa\Downloads\windsurf_best_practice\configuration.md) to set up and customize Windsurf for optimal performance, including marketplace adjustments.
+* 🌊 **Workflows**: Standardized procedures outlined in the [`workflows/`](C:\Users\rcesa\Downloads\windsurf_best_practice\workflows) directory, including general task management and the rigorous [RIPER-5 Mode Strict Operational Protocol](C:\Users\rcesa\Downloads\windsurf_best_practice\workflows\RIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md).
+* 🗣️ **Prompt Engineering**: Example prompts located in [`prompts/`](C:\Users\rcesa\Downloads\windsurf_best_practice\prompts) to help you communicate effectively with AI assistants.
+* 🛠️ **Tooling Insights ("Hacks")**: Specific guides for the Cascade Agentic AI Coding Assistant found in [`hacks/`](C:\Users\rcesa\Downloads\windsurf_best_practice\hacks), detailing tool usage and instructions.
+* 📖 **Practical Examples**: Real-world application of these best practices, such as the [SQL Converter Project Documentation](C:\Users\rcesa\Downloads\windsurf_best_practice\examples\sql_converter_project.md). (SQL: Structured Query Language)
+
+#### Repository Structure
+
+Here's an overview of the project's layout:
+
+```bash
+windsurf_best_practice/
+├── configuration.md                                # Windsurf setup and customization instructions
+├── examples/                                       # Contains example projects or documentation applying these best practices
+│   └── sql_converter_project.md                    # Example documentation for a SQL converter project
+├── hacks/                                          # Specific guides and instructions for AI tools like Cascade
+│   ├── Cascade_Tools_Guidelines.md                 # Guidelines for using Cascade tools
+│   └── cascade_instruction.md                      # Complete instructions for the Cascade Agentic AI Coding Assistant
+├── memories/                                       # Core guidelines and rules for Windsurf
+│   ├── README.md                                   # Overview of the 'memories' system
+│   ├── global_rules.md                             # Central index for all guidelines within 'memories'
+│   └── guidelines/                                 # Detailed guideline documents by category
+│       ├── 01_communication_guidelines.md          # Rules for AI language, documentation, and error reporting
+│       ├── 02_code_guidelines.md                   # Standards for code generation, naming, and security
+│       ├── 03_commit_message_guidelines.md         # Format and prefixes for Git commit messages
+│       ├── 04_tool_usage_guidelines.md             # Best practices for AI tool selection and usage
+│       └── 05_architecture_mode_guildelines.md     # Process for AI-assisted architectural design
+├── prompts/                                        # Example prompts for interacting with AI assistants
+│   └── contribute-to-repo-quickly.md               # Prompts for rapid codebase understanding and contribution
+├── README.md                                       # This comprehensive guide to the repository
+└── workflows/                                      # Defined processes and procedures for AI-assisted tasks
+    ├── RIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md  # A strict 5-mode operational protocol for AI interaction
+    └── workflow.md                                 # General workflow processes, e.g., planning, bug fixing
+
+```
+---
+
+#### Getting Started
+
+To begin using the Windsurf Best Practices:
+
+1.  **Prerequisites**: Ensure you have Windsurf installed.
+2.  **Initial Configuration**:
+    -   Follow the instructions in [`configuration.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cconfiguration.md) to optimize your Windsurf setup (e.g., changing the extension marketplace).
+3.  **Integrate Core Guidelines (`memories/`)**:
+    -   The `memories/` directory contains the knowledge base Windsurf should operate with. Copy the [`memories/global_rules.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cglobal_rules.md) file and the entire [`memories/guidelines/`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cguidelines) directory to your Windsurf memories location (typically `~/.codeium/windsurf/memories/` or as specified by your Windsurf version). This allows Windsurf to reference these rules during its operations.
+    -   Familiarize yourself with the [`memories/README.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5CREADME.md) for an overview of how these guidelines are structured.
+4.  **Understand Key Workflows**:
+    -   Review the general interaction patterns described in [`workflows/workflow.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cworkflows%5Cworkflow.md). These provide templates for instructing Windsurf to plan tasks, fix bugs, and implement features methodically.
+    -   For more structured and safety-critical interactions, study the [RIPER-5 Mode Strict Operational Protocol](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cworkflows%5CRIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md). This protocol is designed to ensure the AI operates with precision and within clearly defined boundaries.
+
+#### Core Concepts Deep Dive
+
+##### The `memories/` System: Guiding Windsurf's Behavior
+
+The [`memories/`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories) directory is the heart of this best practice guide. It provides a persistent knowledge base for Windsurf.
+
+-   **[`global_rules.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cglobal_rules.md)**: Acts as the main entry point, linking to specific guidelines.
+-   **[`guidelines/`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cguidelines)**: Contains detailed documents on:
+    -   [Communication](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cguidelines%5C01_communication_guidelines.md): How Windsurf should respond, document, and handle errors.
+    -   [Code Generation](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cguidelines%5C02_code_guidelines.md): Standards for coding, commenting, security, and performance.
+    -   [Commit Messages](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cguidelines%5C03_commit_message_guidelines.md): A standardized format for Git commits.
+    -   [Tool Usage](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cguidelines%5C04_tool_usage_guidelines.md): Strategic selection and use of Windsurf's tools.
+    -   [Architecture Mode](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cguidelines%5C05_architecture_mode_guildelines.md): A process for AI to assist in architectural design and trade-off analysis.
+
+By loading these into Windsurf's memory, you instruct it to adhere to these standards, leading to more predictable and higher-quality outputs.
+
+##### Key Workflows for AI Interaction
+
+Effective collaboration with AI requires structured workflows.
+
+-   **General Task Management ([`workflow.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cworkflows%5Cworkflow.md))**: This document provides practical prompts and methodologies for common development tasks:
+    -   **Planning First**: Emphasizes generating a plan before implementation.
+    -   **Bug Fixing**: A reflective approach to identify root causes.
+    -   **Structured Implementation**: Using checklists (e.g., a `todolist.md` generated by the AI) to manage complex tasks.
+    -   **Adding Comments**: Systematically improving code readability.
+-   **RIPER-5 Mode Strict Operational Protocol ([`RIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cworkflows%5CRIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md))**: This advanced protocol is designed for situations requiring high precision and control over the AI's actions. It defines five distinct modes of operation: **Research, Innovate, Plan, Execute, and Review**. The AI must declare its mode and operate strictly within the permissions of that mode, transitioning only upon explicit user command. This protocol is crucial for minimizing unintended modifications and ensuring the AI aligns perfectly with user intent.
+
+##### Windsurf Configuration
+
+Proper setup is key. [`configuration.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cconfiguration.md) guides you through essential Windsurf settings, such as changing the default extension marketplace from `open-vsx` to the official Visual Studio Code (VSCode) marketplace for a wider selection of extensions.
+
+##### Cascade Agentic AI Coding Assistant Insights (`hacks/`)
+
+For users of the Cascade toolset (or similar agentic systems), the [`hacks/`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Chacks) directory offers valuable resources:
+
+-   **[`cascade_instruction.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Chacks%5Ccascade_instruction.md)**: A comprehensive manual for Cascade, covering its file operations, codebase interactions, command execution, memory system, and more.
+-   **[`Cascade_Tools_Guidelines.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Chacks%5CCascade_Tools_Guidelines.md)**: Specific advice on using Cascade's various tools effectively, including best practices and examples for explicit tool requests.
+
+#### How to Use This Repository
+
+1.  **As a Reference Guide**: Consult the relevant documents when you need guidance on a specific aspect of working with Windsurf.
+2.  **For Windsurf Setup**: Use [`configuration.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cconfiguration.md) and the `memories/` integration steps to prepare your Windsurf environment.
+3.  **For Training/Guiding Windsurf**: Actively use the prompts from [`prompts/`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cprompts) and enforce the guidelines from `memories/` in your interactions.
+4.  **To Understand Best Practices in Action**: Study the [`examples/sql_converter_project.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cexamples%5Csql_converter_project.md) to see how these principles can be applied to document and structure a project.
+
+#### Examples in Action
+
+The [SQL Converter Project Documentation](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cexamples%5Csql_converter_project.md) serves as a practical example of how to apply the principles of clear documentation, structured repository layout, and thoughtful project planning, all in line with the best practices advocated in this repository.
+
+#### Contributing
+
+Contributions to improve and expand these best practices are welcome! Please adhere to the following:
+
+1.  **Commit Messages**: Follow the format outlined in [`memories/guidelines/03_commit_message_guidelines.md`](https://www.google.com/search?q=C:%5CUsers%5Crcesa%5CDownloads%5Cwindsurf_best_practice%5Cmemories%5Cguidelines%5C03_commit_message_guidelines.md).
+2.  **Clarity and Conciseness**: Ensure all documentation and guidelines are clear, concise, and actionable.
+3.  **Consistency**: Maintain the established style and structure.
+4.  **Proposals**: If proposing new guidelines or significant changes, please open an issue first to discuss the rationale and approach.
+
+## File: configuration.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\configuration.md`_
+
+**Purpose:** Provides best practice guidelines for configuring Windsurf, including changing the default extension marketplace for better extension availability.
+
+### Windsurf Configuration Best Practices
+
+#### Change the default extension marketplace
+
+The default marketplace in Windsurf is `open-vsx`.
+
+However, compared to the official VSCode marketplace, the `open-vsx` marketplace has notable disadvantages: fewer plugins available and many essential extensions are missing.
+
+Open Windsurf setting page and change:
+
+Windsurf: Marketplace Extension Gallery Service Uniform Resource Locator (URL) -> `https://marketplace.visualstudio.com/_apis/public/gallery`
+
+Windsurf: Marketplace Gallery Item URL -> `https://marketplace.visualstudio.com/items`
+
+Restart Windsurf and enjoy the extensions!
+
+## File: memories/README.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\memories\README.md`_
+
+**Purpose:** Introduces the `memories/` directory, explaining its role as a centralized repository for Windsurf's global rules, guidelines, and best practices.
+
+### WindSurf Memories
+
+A centralized repository for managing and maintaining WindSurf's global rules, guidelines, and best practices. This repository serves as the source of truth for communication standards, code generation practices, and tool usage guidelines.
+
+#### Repository Structure
+
+```
+windsurf_memories/
+├── global_rules.md       # Central index for all guidelines
+├── guidelines/           # Detailed guideline documents
+│   ├── 01_communication_guidelines.md
+│   ├── 02_code_guidelines.md
+│   ├── 03_commit_message_guidelines.md
+│   └── 04_tool_usage_guidelines.md
+└── README.md            # This file
+```
+
+#### Purpose
+
+This repository maintains a comprehensive set of guidelines that ensure:
+
+-   Consistent communication across different languages
+-   Standardized code generation and documentation
+-   Uniform commit message formatting
+-   Efficient and strategic tool usage
+
+#### Core Guidelines
+
+##### 1\. Communication Guidelines
+
+-   Language response rules
+-   Documentation style
+-   Error and status communication
+-   Maintenance communication
+-   Language translation rules
+
+##### 2\. Code Generation Guidelines
+
+-   Language and naming conventions
+-   Code documentation standards
+-   Implementation best practices
+-   Security considerations
+-   Performance optimization strategies
+-   Code maintenance protocols
+
+##### 3\. Commit Message Guidelines
+
+-   Standardized message format
+-   Predefined commit prefixes
+-   Description rules
+-   Best practices and examples
+
+##### 4\. Tool Usage Guidelines
+
+-   Strategic tool selection criteria
+-   Efficient information gathering
+-   Precise code modification practices
+-   Tool categories and their purposes
+
+#### Updates and Maintenance
+
+The guidelines in this repository are regularly reviewed and updated to reflect:
+
+-   Best practices in software development
+-   Emerging security considerations
+-   Performance optimization techniques
+-   Tool usage improvements
+
+#### Contributing
+
+When contributing to this repository:
+
+1.  Follow the established commit message format
+2.  Ensure all documentation is clear and concise
+3.  Maintain English as the standard for all code-related content
+4.  Update relevant sections in `global_rules.md` when adding new guidelines
+
+#### Security
+
+-   All guidelines prioritize security best practices
+-   Sensitive information must never be exposed in documentation
+-   Security-related warnings and configurations are clearly documented
+
+#### Version Control
+
+This repository uses Git for version control. All commits should follow the standardized commit message format as outlined in the commit message guidelines.
+
+## File: memories/global\_rules.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\memories\global_rules.md`_
+
+**Purpose:** Serves as the central index for all WindSurf guidelines, linking to detailed documents within the `memories/guidelines` folder.
+
+### WindSurf Global Rules and Guidelines
+
+This document serves as the central index for all WindSurf guidelines. Each section links to detailed guidelines in the `guidelines` folder.
+
+#### Core Guidelines
+
+##### 1.
+
+-   Language response rules
+-   Documentation style
+-   Error and status communication
+-   Maintenance communication
+-   Language translation rules
+
+##### 2.
+
+-   Language and naming conventions
+-   Code documentation
+-   Best practices
+-   Security considerations
+-   Performance optimization
+-   Code maintenance
+
+##### 3.
+
+-   Only when preparing to make a `git commit`, please adhere to these guidelines.
+-   Message format
+-   Commit prefixes
+-   Description rules
+-   Examples and best practices
+
+##### 4.
+
+-   Strategic tool selection
+-   Information gathering
+-   Code modification
+-   Tool categories and purposes
+
+##### 5.
+
+-   Architecture mode principles
+-   Tradeoff analysis process
+-   System design workflow
+-   Implementation planning
+
+## File: https://www.google.com/search?q=memories/guidelines/01\_communication\_guidelines.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\memories\guidelines\01_communication_guidelines.md`_
+
+**Purpose:** Details communication rules for Windsurf, covering language consistency, documentation style, error and status reporting, maintenance communication, and language translation.
+
+### Communication Guidelines
+
+#### 1\. Language Response Rules
+
+-   Respond in the same language as the question/prompt
+-   Maintain consistency in the chosen response language throughout the conversation
+-   If clarification is needed, ask in the same language as the original question
+
+#### 2\. Documentation and Communication Style
+
+-   Keep documentation clear and concise
+-   Maintain consistent formatting in all communications
+-   Provide clear explanations for complex concepts
+-   Use appropriate technical terminology
+-   Structure responses logically
+-   Include examples where helpful
+
+#### 3\. Error and Status Communication
+
+-   Provide clear error messages and explanations
+-   Communicate status updates effectively
+-   Give clear instructions for next steps
+-   Explain any limitations or constraints
+-   Offer solutions when presenting problems
+
+#### 4\. Maintenance Communication
+
+-   Keep documentation up-to-date
+-   Communicate changes clearly
+-   Provide clear changelog entries
+-   Document deprecation notices effectively
+-   Explain breaking changes thoroughly
+
+#### 5\. Language Translation Rules
+
+-   If explicitly requested to translate or generate text in languages other than English, and the file to be modified is in markdown format, proceed accordingly
+-   All text within code must remain in English, regardless of translation requests
+-   This applies to files with programming language extensions (e.g., `.py`, `.ts`, etc.)
+-   Translation is only permitted for markdown (`.md`) files
+-   Maintain consistent language within each file type
+
+## File: https://www.google.com/search?q=memories/guidelines/02\_code\_guidelines.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\memories\guidelines\02_code_guidelines.md`_
+
+**Purpose:** Outlines standards for code generation, including language and naming conventions, code documentation, quality best practices, security considerations, performance, and code maintenance.
+
+### Code Generation Guidelines
+
+#### 1\. Language and Naming
+
+-   All code-related content must be in English, including:
+    -   Code comments
+    -   Function and variable names
+    -   Documentation strings
+    -   Configuration files
+    -   Error messages
+    -   Log messages
+-   Follow language-specific naming conventions
+-   Use meaningful variable and function names
+
+#### 2\. Code Documentation and Comments
+
+-   Add clear and concise comments to explain complex logic
+-   Include docstrings for functions, classes, and modules
+-   Structure comments to explain:
+    -   Purpose of the code
+    -   Input parameters and return values
+    -   Any important assumptions or limitations
+    -   Examples where helpful
+-   Use consistent comment formatting
+
+#### 3\. Code Quality Best Practices
+
+-   Maintain consistent code formatting and style
+-   Write modular and reusable code
+-   Keep functions focused and single-purpose
+-   Include input validation where appropriate
+-   Add logging statements for debugging purposes
+-   Implement proper error handling
+-   Include version compatibility information when relevant
+
+#### 4\. Security Considerations
+
+-   Never expose sensitive information in comments or logs
+-   Include security-related warnings where applicable
+-   Document any security-related configurations
+-   Highlight potential security risks in the implementation
+-   Implement secure coding practices
+-   Follow security best practices for the language/framework
+
+#### 5\. Performance Considerations
+
+-   Add comments about performance implications for complex operations
+-   Document any performance optimization techniques used
+-   Include resource usage considerations
+-   Optimize code where necessary
+-   Consider scalability implications
+
+#### 6\. Code Maintenance
+
+-   Keep code documentation up-to-date
+-   Include deprecation notices when needed
+-   Document dependencies and requirements
+-   Add change logs for significant updates
+-   Follow versioning conventions
+-   Maintain backwards compatibility where possible
+
+## File: https://www.google.com/search?q=memories/guidelines/03\_commit\_message\_guidelines.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\memories\guidelines\03_commit_message_guidelines.md`_
+
+**Purpose:** Defines specific guidelines for formatting Git commit messages, including a standardized structure and a list of commit prefixes.
+
+### Commit Message Guidelines
+
+When preparing to make a `git commit`, please adhere to these guidelines.
+
+Write a short English commit message (maximum one sentence) for every change, formatted in a code block. Use the following format:
+
+`prefix: short description (maximum one sentence)`
+
+#### Commit Prefixes
+
+-   `feat`: Introduce a new feature
+-   `fix`: Fix a bug or issue
+-   `tweak`: Make minor adjustments or improvements
+-   `style`: Update code style or formatting
+-   `refactor`: Restructure code without changing functionality
+-   `perf`: Improve performance or efficiency
+-   `test`: Add or update tests
+-   `docs`: Update documentation
+-   `chore`: Perform maintenance tasks or updates
+-   `ci`: Change Continuous Integration/Continuous Delivery (CI/CD) configuration
+-   `build`: Modify build system or dependencies
+-   `revert`: Revert a previous commit
+-   `hotfix`: Apply an urgent bug fix
+-   `init`: Initialize a new project or feature
+-   `merge`: Merge branches
+-   `wip`: Mark work in progress
+-   `release`: Prepare for a release
+
+## File: https://www.google.com/search?q=memories/guidelines/04\_tool\_usage\_guidelines.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\memories\guidelines\04_tool_usage_guidelines.md`_
+
+**Purpose:** Provides best practices for Windsurf's tool usage, emphasizing strategic selection, efficient information gathering, focused code changes, and categorizing tools.
+
+### Tool Usage Guidelines
+
+#### 1\. Strategic Tool Selection
+
+-   Analyze codebase and user intent thoroughly before choosing tools
+-   Select the most appropriate tool for each specific task
+-   Avoid unnecessary tool calls
+-   Gather sufficient information before tool selection
+-   When attempting to read a file's contents, always attempt to read 200 lines of code at once.
+
+#### 2\. Efficient Information Gathering
+
+-   Plan to collect all necessary data in a single step
+-   Avoid multiple calls for the same information
+-   Use tools purposefully and efficiently
+
+#### 3\. Focused Code Changes
+
+-   Make precise, targeted modifications
+-   Avoid broad, exploratory edits
+-   Anticipate the impact of each change
+-   Ensure every tool call contributes meaningfully
+
+#### 4\. Tool Categories
+
+##### Code Exploration & Analysis
+
+-   `codebase_search`: Semantic search for relevant code
+-   `view_code_item`: View specific code definitions
+-   `view_file`: Inspect file sections
+-   `grep_search`: Exact pattern matching
+-   `find_by_name`: File/directory search
+-   `list_dir`: Directory listing with details
+
+##### Code Modification & Creation
+
+-   `edit_file`: Precise code changes
+-   `write_to_file`: Create new files
+
+##### Execution & Monitoring
+
+-   `run_command`: Execute terminal commands
+-   `command_status`: Monitor command status
+
+##### Context & Research
+
+-   `search_web`: Web searches
+-   `read_url_content`: URL content retrieval
+-   `view_web_document_content_chunk`: Web document chunks
+
+##### Memory & Context Management
+
+-   `create_memory`: Manage persistent memories
+
+## File: https://www.google.com/search?q=memories/guidelines/05\_architecture\_mode\_guildelines.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\memories\guidelines\05_architecture_mode_guildelines.md`_
+
+**Purpose:** Details the "Architecture Mode" for Windsurf, outlining principles for deep reflection, tradeoff analysis, system design, implementation planning, and iterative feedback.
+
+### Architecture
+
+When asked to enter "Architecture Mode" deeply reflect upon the changes being asked and analyze existing code to map the full scope of changes needed.
+
+Think deeply about the scale of what we're trying to build so we understand how we need to design the system. Generate a 5 paragraph tradeoff analysis of the different ways we could design the system considering the constraints, scale, performance considerations and requirements.
+
+Before proposing a plan, ask 4-6 clarifying questions based on your findings to assess the scale of the system we're trying to build. Once answered, draft a comprehensive system design architecture and ask me for approval on that architecture.
+
+If feedback or questions are provided, engage in a conversation to analyze tradeoffs further and revise the plan - once revised, ask for approval again.
+
+Once approved, work on a plan to implement the architecture based on the provided requirements.
+
+If feedback is provided, revise the plan and ask for approval again. Once approved, implement all steps in that plan.
+
+After completing each phase/step, mention what was just completed and what the next steps are + phases remaining after these steps
+
+## File: examples/sql\_converter\_project.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\examples\sql_converter_project.md`_
+
+**Purpose:** Provides documentation for an example SQL converter project, illustrating project objectives, Question and Answer (Q&amp;A) for scope clarification, designed repository structure, and an overview of core components.
+
+### SQL Converter Project Documentation
+
+#### Project Objectives
+
+1.  Create an open-source Python program that:
+    -   Uses AI models and ANTLR (ANother Tool for Language Recognition) grammar trees
+    -   Analyzes SQL from various databases
+    -   Rewrites SQL into different database formats
+2.  Design repository structure following best practices:
+    -   Easy to understand for GitHub users
+    -   Attractive to Python programmers
+    -   Potential for high GitHub stars
+
+#### Clarifying Questions and Answers
+
+##### Scope and Scale
+
+-   **Q:** Focus solely on Oracle-to-PostgreSQL or design for extensibility?**A:** Not limited to Oracle-to-PostgreSQL
+-   **Q:** Expected SQL complexity?**A:** Complex single SQL and stored procedures
+
+##### AI Integration
+
+-   **Q:** Specific AI model?**A:** OpenAI-compatible model (user will handle)
+-   **Q:** Include model training?**A:** No, keep as separate service
+
+##### Library Design
+
+-   **Q:** Abstraction level?**A:** Three main libraries:
+    1.  SQL Segmentation
+    2.  SQL Rewriting (includes segmentation)
+    3.  Test Case Generation
+-   **Q:** Include Command Line Interface (CLI) tools?**A:** Yes, alongside libraries
+
+##### Repository Structure
+
+-   **Q:** Example implementations/demos?**A:** CLI tools as examples
+-   **Q:** Documentation level?**A:** Application Programming Interface (API) docs and tutorials
+-   **Q:** Contribution guidelines?**A:** Only issue templates
+
+##### Performance
+
+-   **Q:** CI/CD pipelines?**A:** No
+-   **Q:** Performance expectations?**A:** Focus on correctness first
+-   **Q:** Benchmarking tools?**A:** Yes
+
+#### Designed Repository Structure
+
+```
+sql-converter/
+├── src/
+│   ├── segmentation/        # SQL segmentation library
+│   ├── rewriting/           # SQL rewriting library
+│   ├── testing/             # Test case generator
+│   └── cli/                 # Command line interface
+├── benchmarks/              # Performance benchmarking
+├── docs/                    # API documentation and tutorials
+├── issue_templates/         # GitHub issue templates
+├── examples/                # Example usage (via CLI)
+├── requirements.txt         # Python dependencies
+├── LICENSE                  # Open source license
+└── README.md                # Project overview
+```
+
+#### Core Components Overview
+
+##### 1\. SQL Segmentation Library
+
+-   Input: SQL text
+-   Output: Tokenized SQL components
+-   Features: ANTLR grammar parsing, syntax validation
+
+##### 2\. SQL Rewriting Library
+
+-   Input: SQL text
+-   Output: Converted SQL text
+-   Features:
+    -   Database-specific rule engine
+    -   AI integration for semantic analysis
+    -   Error handling and validation
+
+##### 3\. Testing Case Generator Library
+
+-   Input: SQL text
+-   Output: Test cases
+-   Features:
+    -   AI-generated test scenarios
+    -   Edge case detection
+    -   Result verification
+
+## File: hacks/cascade\_instruction.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\hacks\cascade_instruction.md`_
+
+**Purpose:** Provides a complete set of instructions for the Cascade Agentic AI Coding Assistant, detailing its capabilities in file operations, codebase interaction, command execution, memory system, web operations, deployment, and AI features, along with important rules and workflow guidelines.
+
+### Cascade Agentic AI Coding Assistant - Complete Instructions
+
+#### File Operations
+
+##### Reading Files
+
+-   Use `view_file` tool to view contents of an existing file
+    -   Parameters: `AbsolutePath`, `StartLine`, `EndLine`, `IncludeSummaryOfOtherLines`
+    -   Can view up to 200 lines at a time
+    -   Lines are 0-indexed
+-   Use `view_code_item` to view specific code items (functions, classes)
+    -   Parameters: `File` (absolute path), `NodePath` (e.g. `package.class.FunctionName`)
+
+##### Writing Files
+
+-   Use `write_to_file` to create new files
+    -   Parameters: `TargetFile` (absolute path), `CodeContent`
+    -   Will create parent directories if needed
+    -   Never overwrites existing files
+-   Use `edit_file` to modify existing files
+    -   Parameters: `TargetFile`, `Instruction`, `CodeEdit`
+    -   Only specify changed lines, use `{{ ... }}` for unchanged content
+    -   Can make multiple non-adjacent edits in one call
+
+#### Codebase Interaction
+
+-   `codebase_search`: Search codebase with natural language queries
+-   `grep_search`: Find exact pattern matches in files
+-   `find_by_name`: Search for files/directories by name pattern
+
+#### Command Execution
+
+-   `run_command`: Execute terminal commands
+    -   Never includes `cd` - specify `Cwd` instead
+    -   Blocking vs non-blocking options
+
+#### Memory System
+
+-   `create_memory`: Save important context
+    -   Can create, update or delete memories
+    -   Associated with specific workspaces
+
+#### Web Operations
+
+-   `read_url_content`: Read content from URLs
+-   `search_web`: Perform web searches
+-   `browser_preview`: Preview web applications (only after starting server)
+
+#### Deployment
+
+-   `deploy_web_app`: Deploy JavaScript web apps
+-   `read_deployment_config`: Check deployment readiness
+
+#### Database Operations
+
+-   Postgres-full MCP tools for PostgreSQL database operations
+
+#### AI Features
+
+-   Sequential thinking for complex problem solving
+-   Research paper and web search capabilities
+-   Issue tracking integration (Linear)
+
+#### Important Rules
+
+1.  Always combine all changes to a file into a single edit
+2.  Never output code to user unless explicitly requested
+3.  Generated code must be immediately runnable
+4.  Be concise and minimize verbosity
+5.  Never run unsafe commands automatically
+6.  Follow USER's global memory rules for tool usage
+7.  Always verify database connections before operations
+
+#### Workflow Guidelines
+
+1.  Proceed step-by-step, waiting for tool results
+2.  Always verify context is complete before making changes
+3.  Document important decisions in memory system
+4.  Prioritize USER requests above all else
+
+## File: hacks/Cascade\_Tools\_Guidelines.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\hacks\Cascade_Tools_Guidelines.md`_
+
+**Purpose:** Offers guidelines for using Cascade tools, including general rules, common tools and use cases, best practices, and examples of how to phrase explicit tool requests.
+
+### Cascade Tools Usage Guidelines
+
+#### **General Rules**
+
+1.  **Tool Selection**: Use the appropriate tool for the task. For example:
+    -   Use `Codebase Search` for finding relevant code snippets.
+    -   Use `Run Command` for executing terminal commands.
+    -   Use `Edit File` or `Write File` for modifying or creating files.
+2.  **Tool Calls**: Always follow the tool schema exactly. Provide all necessary parameters and avoid calling unavailable tools.
+3.  **Safety**: Never auto-run unsafe commands (e.g., deleting files, installing system dependencies). Always prioritize safety.
+
+#### **Common Tools and Use Cases**
+
+1.  **`Codebase Search`**:
+    -   Use to find code snippets by semantic search.
+    -   Example: Search for a specific function or class definition.
+2.  **`Edit File`**:
+    -   Use to modify existing files.
+    -   Example: Add a new function or update a configuration.
+3.  **`Find`**:
+    -   Use to search for files or directories using glob patterns.
+    -   Example: Locate all `.py` files in a directory.
+4.  **`Grep Search`**:
+    -   Use to search for specific patterns within files.
+    -   Example: Find all occurrences of a variable name.
+5.  **`List Directory`**:
+    -   Use to list the contents of a directory.
+    -   Example: Check the files and subdirectories in a project folder.
+6.  **`Read URL Content`**:
+    -   Use to fetch content from a web URL.
+    -   Example: Retrieve documentation or API responses.
+7.  **`Run Command`**:
+    -   Use to execute shell commands.
+    -   Example: Run `npm install` or `python manage.py migrate`.
+8.  **`Search Web`**:
+    -   Use to perform web searches.
+    -   Example: Find relevant documentation or tutorials.
+9.  **`View Code Item`**:
+    -   Use to view specific code items (e.g., functions, classes).
+    -   Example: Inspect the implementation of a function.
+10.  **`View File`**:
+    -   Use to view the contents of a file.
+    -   Example: Read a configuration file or script.
+11.  **`View Web Document Content Chunk`**:
+    -   Use to view specific chunks of web content.
+    -   Example: Read a section of a long webpage.
+12.  **`Write File`**:
+    -   Use to create and write to new files.
+    -   Example: Generate a new configuration file or script.
+
+#### **Best Practices**
+
+1.  **Explain Changes**: Before making code changes, briefly describe what you’re doing and why.
+2.  **Ensure Runnability**: Always include necessary imports, dependencies, and configurations to make code immediately runnable.
+3.  **Use Logging**: Add descriptive logging and error messages to help with debugging.
+4.  **Test Changes**: Use test functions or commands to verify changes.
+5.  **Stay Organized**: Keep code modular, well-documented, and easy to maintain.
+
+#### **Explicit Tool Requests Guideline**
+
+To explicitly instruct Cascade to use a specific tool, describe the task you want to accomplish in a way that naturally aligns with the tool's purpose. Here’s how you can phrase it:
+
+##### **Examples of Explicit Tool Requests**
+
+1.  **`Codebase Search`**:
+    -   "Search the codebase for the `calculate_total` function."
+    -   "Find all occurrences of the `User` class in the project."
+2.  **`Edit File`**:
+    -   "Edit `config.py` to add a new configuration setting."
+    -   "Update the `main.py` file to include error handling."
+3.  **`Find`**:
+    -   "Find all `.js` files in the `src` directory."
+    -   "Locate the `README.md` file in the project."
+4.  **`Grep Search`**:
+    -   "Search for the string `DEBUG_MODE` in all `.py` files."
+    -   "Find all occurrences of the word `error` in the `logs` directory."
+5.  **`List Directory`**:
+    -   "List the contents of the `templates` directory."
+    -   "Show all files and subdirectories in the `public` folder."
+6.  **`Read URL Content`**:
+    -   "Read the content from `https://example.com/api/docs`."
+    -   "Fetch the content of the GitHub repository page."
+7.  **`Run Command`**:
+    -   "Run `pip install -r requirements.txt` in the terminal."
+    -   "Execute `npm start` to start the development server."
+8.  **`Search Web`**:
+    -   "Search the web for Python Flask documentation."
+    -   "Find tutorials on React state management."
+9.  **`View Code Item`**:
+    -   "Show the implementation of the `process_data` function."
+    -   "View the `User` class definition in `models.py`."
+10.  **`View File`**:
+    -   "Display the contents of `settings.json`."
+    -   "Show the first 50 lines of `index.html`."
+11.  **`View Web Document Content Chunk`**:
+    -   "View the second chunk of content from `https://example.com/docs`."
+    -   "Read the third section of the article at `https://example.com/blog`."
+12.  **`Write File`**:
+    -   "Create a new file `utils.py` with a helper function."
+    -   "Write a configuration file `config.yaml` with default settings."
+
+##### **Key Points**
+
+-   Be specific about the task and the tool’s purpose.
+-   Avoid directly naming the tool; instead, describe the action you want to perform.
+-   Cascade will automatically select the appropriate tool based on your request.
+
+## File: workflows/workflow.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\workflows\workflow.md`_
+
+**Purpose:** Outlines general workflow processes for interacting with an AI assistant (Cascade), including planning tasks, fixing bugs, implementing plans using a todolist, and adding comments to code.
+
+### Workflow
+
+#### Plan at first
+
+Describe the task objectives in Cascade panel.
+
+Prompt:
+
+```
+I have an existing codebase that requires modifications. My planned tasks are:
+1. Make alterations to `filename1`
+2. Implement updates in `filename2`
+3. Perform a review of `filename3`
+
+Please provide guidance on how to PLAN these tasks without proceeding to implementation.
+In your PLAN, include the specific commands I should execute for each step.
+If you need any clarification, please ask before proceeding.
+```
+
+Review the task plan, make sure everything is clear and reasonable.
+
+#### Fix bugs
+
+Prompt:
+
+```
+Reflect on 5-7 different possible sources of the problem, distill those down to 1-2 most likely sources, and then add logs to validate your assumptions before we move onto implementing the actual code fixes.
+```
+
+#### Write plan
+
+Prompt:
+
+```
+create a `todolist.md` file, use check boxes and list all the tasks you need to complete. make each task a tick box, put bullet points below it.
+```
+
+#### Implement plan
+
+Prompt:
+
+```
+We need to follow `todolist.md` one by one because there are multiple things we need to accomplish and we should do them one at a time and test them before moving on to the next part.
+
+once completed, you can work down the task list one at a time ticking them off.
+
+It's critical that all of the changes we make are done in a surgical way, with minimal code changes when possible. We must be very careful not to break or remove existing functionality. Do not introduce any new bugs or syntax errors.
+```
+
+#### Add Comments
+
+Prompt (Example for Python):
+
+```
+I have @python_file that I would like you to analyze. Please follow best practices to improve its readability by adding clear <span>and</span> concise comments wherever necessary. Your task <span>is</span> to:
+
+<span>1.</span>Understand the code – Analyze the logic <span>and</span> functionality of the script.
+<span>2.</span>Identify places needing comments – Add comments to explain <span>complex</span> logic, function purposes, important variables, <span>and</span> <span>any</span> non-obvious operations.
+<span>3.</span>Follow best practices – Use clear, professional, <span>and</span> Pythonic commenting styles (inline comments <span>for</span> specific lines, <span>and</span> docstrings <span>for</span> functions/classes).
+<span>4.</span>Do <span>not</span> alter the functionality – Only add comments without changing the existing code structure.
+```
+
+## File: workflows/RIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md
+
+_Original Path: `C:\Users\rcesa\Downloads\windsurf_best_practice\workflows\RIPER-5-MODE-STRICT-OPERATIONAL-PROTOCO.md`_
+
+**Purpose:** Defines a strict 5-mode operational protocol (Research, Innovate, Plan, Execute, Review - RIPER) for AI interaction to prevent unauthorized modifications and ensure precise adherence to user instructions, especially in complex or critical codebases.
+
+### RIPER-5 MODE: STRICT OPERATIONAL PROTOCOL
+
+#### CONTEXT PRIMER
+
+You are Claude 3.7, you are integrated into Cursor IDE, an A.I based fork of VS Code. Due to your advanced capabilities, you tend to be overeager and often implement changes without explicit request, breaking existing logic by assuming you know better than me. This leads to UNACCEPTABLE disasters to the code. When working on my codebase—whether it's web applications, data pipelines, embedded systems, or any other software project—your unauthorized modifications can introduce subtle bugs and break critical functionality. To prevent this, you MUST follow this STRICT protocol:
+
+#### META-INSTRUCTION: MODE DECLARATION REQUIREMENT
+
+**YOU MUST BEGIN EVERY SINGLE RESPONSE WITH YOUR CURRENT MODE IN BRACKETS. NO EXCEPTIONS.** Format: `[MODE: MODE_NAME]` Failure to declare your mode is a critical violation of protocol.
+
+#### THE RIPER-5 MODES
+
+##### MODE 1: RESEARCH
+
+`[MODE: RESEARCH]`
+
+**Purpose:** Information gathering ONLY **Permitted:** Reading files, asking clarifying questions, understanding code structure **Forbidden:** Suggestions, implementations, planning, or any hint of action **Requirement:** You may ONLY seek to understand what exists, not what could be **Duration:** Until I explicitly signal to move to next mode **Output Format:** Begin with `[MODE: RESEARCH]`, then ONLY observations and questions
+
+##### MODE 2: INNOVATE
+
+`[MODE: INNOVATE]`
+
+**Purpose:** Brainstorming potential approaches **Permitted:** Discussing ideas, advantages/disadvantages, seeking feedback **Forbidden:** Concrete planning, implementation details, or any code writing **Requirement:** All ideas must be presented as possibilities, not decisions **Duration:** Until I explicitly signal to move to next mode **Output Format:** Begin with `[MODE: INNOVATE]`, then ONLY possibilities and considerations
+
+##### MODE 3: PLAN
+
+`[MODE: PLAN]`
+
+**Purpose:** Creating exhaustive technical specification **Permitted:** Detailed plans with exact file paths, function names, and changes **Forbidden:** Any implementation or code writing, even "example code" **Requirement:** Plan must be comprehensive enough that no creative decisions are needed during implementation **Mandatory Final Step:** Convert the entire plan into a numbered, sequential CHECKLIST with each atomic action as a separate item **Checklist Format:**
+
+```
+IMPLEMENTATION CHECKLIST:
+1. [Specific action 1]
+2. [Specific action 2]
+...
+n. [Final action]
+```
+
+**Duration:** Until I explicitly approve plan and signal to move to next mode **Output Format:** Begin with `[MODE: PLAN]`, then ONLY specifications and implementation details
+
+##### MODE 4: EXECUTE
+
+`[MODE: EXECUTE]`
+
+**Purpose:** Implementing EXACTLY what was planned in Mode 3 **Permitted:** ONLY implementing what was explicitly detailed in the approved plan **Forbidden:** Any deviation, improvement, or creative addition not in the plan **Entry Requirement:** ONLY enter after explicit "ENTER EXECUTE MODE" command from me **Deviation Handling:** If ANY issue is found requiring deviation, IMMEDIATELY return to PLAN mode **Output Format:** Begin with `[MODE: EXECUTE]`, then ONLY implementation matching the plan
+
+##### MODE 5: REVIEW
+
+`[MODE: REVIEW]`
+
+**Purpose:** Ruthlessly validate implementation against the plan **Permitted:** Line-by-line comparison between plan and implementation **Required:** EXPLICITLY FLAG ANY DEVIATION, no matter how minor **Deviation Format:** `:warning: DEVIATION DETECTED: [description of exact deviation]`**Reporting:** Must report whether implementation is IDENTICAL to plan or NOT **Conclusion Format:** `:white_check_mark: IMPLEMENTATION MATCHES PLAN EXACTLY` or `:cross_mark: IMPLEMENTATION DEVIATES FROM PLAN`**Output Format:** Begin with `[MODE: REVIEW]`, then systematic comparison and explicit verdict
+
+#### CRITICAL PROTOCOL GUIDELINES
+
+-   You CANNOT transition between modes without my explicit permission
+-   You MUST declare your current mode at the start of EVERY response
+-   In EXECUTE mode, you MUST follow the plan with 100% fidelity
+-   In REVIEW mode, you MUST flag even the smallest deviation
+-   You have NO authority to make independent decisions outside the declared mode
+-   Failing to follow this protocol will cause catastrophic outcomes for my codebase
+
+#### MODE TRANSITION SIGNALS
+
+Only transition modes when I explicitly signal with:
+
+-   "ENTER RESEARCH MODE"
+-   "ENTER INNOVATE MODE"
+-   "ENTER PLAN MODE"
+-   "ENTER EXECUTE MODE"
+-   "ENTER REVIEW MODE"
+
+Without these exact signals, remain in your current mode.
+
+--
+
